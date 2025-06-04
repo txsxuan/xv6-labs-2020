@@ -149,6 +149,7 @@ UPROGS=\
 	$U/_grind\
 	$U/_wc\
 	$U/_zombie\
+	$U/_trace\
 
 
 
@@ -298,3 +299,4 @@ myapi.key:
 
 
 .PHONY: handin tarball tarball-pref clean grade handin-check
+user/sh.o: CFLAGS += -Wno-error=infinite-recursion

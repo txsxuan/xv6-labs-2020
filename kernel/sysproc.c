@@ -95,3 +95,14 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+uint64
+sys_trace(void)
+{
+  uint64 n=0;
+  if(argaddr(0,&n)<0){
+    return -1;
+  }
+  myproc()->syscallMask|=n;
+  return 0;
+}
