@@ -132,6 +132,7 @@ static uint64 (*syscalls[])(void) = {
 };
 
 static char *syscallsNames[] = {
+[SYS_fork]    "fork",
 [SYS_exit]    "exit",
 [SYS_wait]    "wait",
 [SYS_pipe]    "pipe",
